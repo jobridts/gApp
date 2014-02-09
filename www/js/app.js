@@ -38,7 +38,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
       url: '/pet/:petId',
       views: {
         'pets-tab': {
-          templateUrl: 'templates/pet-detail.html',
+          templateUrl: 'templates/person-detail.html',
           controller: 'PetDetailCtrl'
         }
       }
