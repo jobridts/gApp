@@ -37,4 +37,10 @@ angular.module('starter.services', [])
       //return persons[petId];
     }
   }
-});
+})
+
+.factory('Wine', function($resource){
+        return $resource('http://jobridts.be/api/wines/:petId', {}, {
+            update: {method: 'PUT'}
+        });
+    });
