@@ -37,10 +37,4 @@ angular.module('starter.services', [])
       //return persons[petId];
     }
   }
-})
-
-.factory('GapService', ['resource', function($resource){
-    return $resource("http://data.irisnetlab.be/data/icr/json/", {}, {
-        query: {method:'GET', Type:'Feature', isArray:true}
-    });
-}]);
+});
