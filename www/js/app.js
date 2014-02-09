@@ -44,20 +44,28 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
       }
     })
 
-    .state('tab.adopt', {
-      url: '/adopt',
+    .state('tab.groups', {
+      url: '/groups',
       views: {
-        'adopt-tab': {
-          templateUrl: 'templates/adopt.html'
+        'groups-tab': {
+          templateUrl: 'templates/groups.html'
         }
       }
     })
 
-    .state('tab.about', {
-      url: '/about',
+    .state('tab.search', {
+      url: '/search',
       views: {
-        'about-tab': {
-          templateUrl: 'templates/about.html'
+        'search-tab': {
+          templateUrl: 'templates/search.html'
+        }
+      }
+    })
+  .state('tab.settings', {
+      url: '/settings',
+      views: {
+        'settings-tab': {
+          templateUrl: 'templates/settings.html'
         }
       }
     });
