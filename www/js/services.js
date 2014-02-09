@@ -39,8 +39,8 @@ angular.module('starter.services', [])
   }
 })
 
-.factory('Wine', function($resource){
-        return $resource('http://jobridts.be/api/wines/:petId', {}, {
+.factory('gApi', function($resource){
+        return $resource('http://jobridts.be/api/Persoon/:petId', {}, {
             update: {method: 'PUT'}
         });
     });
