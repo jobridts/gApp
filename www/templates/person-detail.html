@@ -1,0 +1,29 @@
+<!--
+  This template loads for the 'tab.pet-detail' state (app.js)
+  'pet' is a $scope variable created in the PetCtrl controller (controllers.js)
+  The PetCtrl pulls data from the Pets service (service.js)
+  The Pets service returns an array of pet data
+-->
+<view title="pet.fullName">
+  <content has-header="true" padding="true">
+    <div class="list">
+      <div class="item">
+        <p>Voornaam</p>
+        <h2>{{pet.Voornaam}}</h2>
+      </div>
+      <div class="item">
+        <p>Naam</p>
+        <h2>{{pet.Naam}}</h2>
+      </div>
+      <div class="item">
+        <p>Geboortedatum</p>
+        <h2>{{pet.GeboorteDatum}}</h2>
+      </div>
+      <div class="item">
+        <p>Type</p>
+        <h2>{{pet.Type}}</h2>
+      </div>
+    </div>
+    <p><a class="button button-small icon ion-arrow-left-b" href="#/tab/pets"> Alle personen</a></p>
+  </content>
+</view>
