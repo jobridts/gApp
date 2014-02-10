@@ -17,7 +17,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('GroupIndexCtrl', function($scope, gApiGroup){
-        $scope.group = gApiGroup.query();
+        $scope.groups = gApiGroup.query();
     });
 
 

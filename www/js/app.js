@@ -48,7 +48,8 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers', '
       url: '/groups',
       views: {
         'groups-tab': {
-          templateUrl: 'templates/groups.html'
+          templateUrl: 'templates/groups.html',
+          controller: 'GroupIndexCtrl'
         }
       }
     })
