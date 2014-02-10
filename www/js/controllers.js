@@ -13,7 +13,7 @@ angular.module('gApp.controllers', [])
     .controller('PersonDetailCtrl', function ($scope, $stateParams, gApiPerson) {
         // "Pets" is a service returning mock data (services.js)
         //$scope.pet = PetService.get($stateParams.petId);
-        $scope.person = gApiPersoni.get({petId: $stateParams.petId});
+        $scope.person = gApiPerson.get({petId: $stateParams.petId});
     })
 
     .controller('GroupIndexCtrl', function ($scope, gApiGroup) {
