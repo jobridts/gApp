@@ -19,22 +19,22 @@ angular.module('gApp', ['ionic', 'gApp.services', 'gApp.controllers', 'ngResourc
     })
 
     // the pet tab has its own child nav-view and history
-    .state('tab.pet-index', {
-      url: '/pets',
+    .state('tab.person-index', {
+      url: '/persons',
       views: {
         'pets-tab': {
-          templateUrl: 'templates/pet-index.html',
-          controller: 'PetIndexCtrl'
+          templateUrl: 'templates/person-index.html',
+          controller: 'PersonIndexCtrl'
         }
       }
     })
 
-    .state('tab.pet-detail', {
-      url: '/pet/:petId',
+    .state('tab.person-detail', {
+      url: '/person/:personID',
       views: {
         'pets-tab': {
           templateUrl: 'templates/person-detail.html',
-          controller: 'PetDetailCtrl'
+          controller: 'PersonDetailCtrl'
         }
       }
     })
@@ -67,7 +67,7 @@ angular.module('gApp', ['ionic', 'gApp.services', 'gApp.controllers', 'ngResourc
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/pets');
+  $urlRouterProvider.otherwise('/tab/persons');
   
 
 });

@@ -3,7 +3,7 @@ angular.module('gApp.services', [])
 /**
  * A simple example service that returns some data.
  */
-.factory('PetService', function() {
+.factory('PersonService', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
@@ -31,7 +31,7 @@ angular.module('gApp.services', [])
     },
     get: function(petId) {
       // Simple index lookup
-      var person = persons[petId];
+      var person = persons[personId];
       person.fullName = person.Voornaam + " " + person.Naam;
       return person;
       //return persons[petId];
@@ -39,8 +39,8 @@ angular.module('gApp.services', [])
   }
 })
 
-.factory('gApi', function($resource){
-        return $resource('http://jobridts.be/api/Persoon/:petId', {}, {
+.factory('gApiPerson', function($resource){
+        return $resource('http://jobridts.be/api/Persoon/:personId', {}, {
             update: {method: 'PUT'}
         });
     })
