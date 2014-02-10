@@ -30,7 +30,7 @@ angular.module('gApp', ['ionic', 'gApp.services', 'gApp.controllers', 'ngResourc
             })
 
             .state('tab.person-detail', {
-                url: '/person/:personID',
+                url: '/person/:personId',
                 views: {
                     'pets-tab': {
                         templateUrl: 'templates/person-detail.html',
