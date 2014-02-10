@@ -4,14 +4,22 @@
 <view title="'Kies een afdeling'">
     <content has-header="true" has-tabs="true" padding="true">
         <div class="list">
-            <label ng-repeat="group in groups" class="item item-radio">
+            <a  class="item item-radio" href="#/tab/persons">
+                <input type="radio" name="group" value="ALL">
+
+                <div class="item-content">
+                    Allemaal
+                </div>
+                <i class="radio-icon ion-checkmark"></i>
+            </a>
+            <a ng-repeat="group in groups" class="item item-radio" href="#/tab/persons/group/{{group.id}}">
                 <input type="radio" name="group" value="{{ group.Afkorting }}">
 
                 <div class="item-content">
                     {{ group.Naam }}
                 </div>
                 <i class="radio-icon ion-checkmark"></i>
-            </label>
+            </a>
         </div>
     </content>
 </view>

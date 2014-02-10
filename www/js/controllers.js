@@ -7,6 +7,11 @@ angular.module('gApp.controllers', [])
         //$scope.pets = PetService.all();
         $scope.persons = gApiPerson.query();
     })
+    .controller('PersonIndexGroupCtrl', function($scope, gApiPersonByGroup, gApiGroup, $stateParams){
+        $scope.group = gApiGroup.get({groupId: $stateParams.groupId});
+        //$scope.persons = gApiPerson.query();
+        $scope.persons = gApiPersonByGroup.query({groupId:$stateParams.groupId});
+    })
 
 
 // A simple controller that shows a tapped item's data
@@ -19,5 +24,6 @@ angular.module('gApp.controllers', [])
     .controller('GroupIndexCtrl', function ($scope, gApiGroup) {
         $scope.groups = gApiGroup.query();
     });
+
 
 

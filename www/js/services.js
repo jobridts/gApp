@@ -1,5 +1,13 @@
 angular.module('gApp.services', [])
 
+   /* .config(function($httpProvider){
+
+        //add GAP Authentication username:password in BASE64
+        //var encoded = "username:password in base64"
+        //$httpProvider.defaults.headers.post['Authentication'] = 'Basic ' +  encoded;
+
+    })*/
+
 /**
  * A simple example service that returns some data.
  */
@@ -40,13 +48,28 @@ angular.module('gApp.services', [])
     })
 
     .factory('gApiPerson', function ($resource) {
-        return $resource('http://jobridts.be/api/Persoon/:personId', {}, {
+        return $resource('http://jobridts.be/api' + '/Persoon/:personId', {}, {
             update: {method: 'PUT'}
+
+        });
+    })
+    .factory('gApiPersonByGroup', function ($resource) {
+        return $resource('http://jobridts.be/api/Persoon/Afdeling/:groupId', {}, {
+            update: {method: 'PUT'}
+
+        });
+    })
+    .factory('gApiPersonByType', function ($resource) {
+        return $resource('http://jobridts.be/api/Persoon/Type/:type', {}, {
+            update: {method: 'PUT'}
+
         });
     })
     .factory('gApiGroup', function ($resource) {
         return $resource('http://jobridts.be/api/Afdeling/:groupId', {}, {
             update: {method: 'PUT'}
         });
+
+
     });
 

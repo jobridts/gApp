@@ -22,7 +22,7 @@ angular.module('gApp', ['ionic', 'gApp.services', 'gApp.controllers', 'ngResourc
             .state('tab.person-index', {
                 url: '/persons',
                 views: {
-                    'pets-tab': {
+                    'persons-tab': {
                         templateUrl: 'templates/person-index.html',
                         controller: 'PersonIndexCtrl'
                     }
@@ -32,9 +32,18 @@ angular.module('gApp', ['ionic', 'gApp.services', 'gApp.controllers', 'ngResourc
             .state('tab.person-detail', {
                 url: '/person/:personId',
                 views: {
-                    'pets-tab': {
+                    'persons-tab': {
                         templateUrl: 'templates/person-detail.html',
                         controller: 'PersonDetailCtrl'
+                    }
+                }
+            })
+            .state('tab.person-group', {
+                url: '/persons/group/:groupId',
+                views: {
+                    'persons-tab': {
+                        templateUrl: 'templates/person-index-group.html',
+                        controller: 'PersonIndexGroupCtrl'
                     }
                 }
             })
