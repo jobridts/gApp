@@ -4,12 +4,12 @@
   The 'pets' data comes from its $scope within PetIndexCtrl (controller.js)
 -->
 <view title="'Personen'">
-  <content has-header="true" has-tabs="true">
-    <list>
-      <a ng-repeat="person in persons" class="item" href="#/tab/person/{{person.id}}">
-        <h3>{{person.Voornaam}} {{person.Naam}}</h3>
-        </a>
-      
-    </list>
-  </content>
+    <content has-header="true" has-tabs="true">
+        <list>
+            <a ng-repeat="person in persons" class="item" href="#/tab/person/{{person.id}}">
+                <h3>{{person.Voornaam}} {{person.Naam}}</h3>
+            </a>
+
+        </list>
+    </content>
 </view>

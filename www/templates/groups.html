@@ -2,15 +2,16 @@
   This template loads for the 'tab.about' state (app.js)
 -->
 <view title="'Kies een afdeling'">
-  <content has-header="true" has-tabs="true" padding="true">
-    <div class="list">
-      <label ng-repeat="group in groups" class="item item-radio">
-        <input type="radio" name="group" value="{{ group.Afkorting }}">
-        <div class="item-content">
-          {{ group.Naam }}
+    <content has-header="true" has-tabs="true" padding="true">
+        <div class="list">
+            <label ng-repeat="group in groups" class="item item-radio">
+                <input type="radio" name="group" value="{{ group.Afkorting }}">
+
+                <div class="item-content">
+                    {{ group.Naam }}
+                </div>
+                <i class="radio-icon ion-checkmark"></i>
+            </label>
         </div>
-        <i class="radio-icon ion-checkmark"></i>
-      </label>
-    </div>
-  </content>
+    </content>
 </view>

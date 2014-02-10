@@ -1,5 +1,4 @@
-
-<!-- 
+<!--
   Create tabs with an icon and label, using the tabs-positive style. 
   Each tab's child <nav-view> directive will have its own 
   navigation history that also transitions its views in and out.
@@ -7,28 +6,26 @@
 <tabs tabs-style="tabs-icon-top" tabs-type="tabs-default">
 
 
- 
+    <!-- About Tab -->
+    <tab title="Afdelingen" icon="icon ion-navicon-round" href="#/tab/groups">
+        <nav-view name="groups-tab"></nav-view>
+    </tab>
+
+    <!-- Pets Tab -->
+    <tab title="Personen" icon="icon ion-ios7-people" href="#/tab/pets">
+        <nav-view name="pets-tab"></nav-view>
+    </tab>
+
 
     <!-- About Tab -->
-  <tab title="Afdelingen" icon="icon ion-navicon-round" href="#/tab/groups">
-    <nav-view name="groups-tab"></nav-view>
-  </tab>
+    <tab title="Zoek" icon="icon ion-search" href="#/tab/search">
+        <nav-view name="search-tab"></nav-view>
+    </tab>
 
- <!-- Pets Tab -->
-  <tab title="Personen" icon="icon ion-ios7-people" href="#/tab/pets">
-    <nav-view name="pets-tab"></nav-view>
-  </tab>
-
-
-  <!-- About Tab -->
-  <tab title="Zoek" icon="icon ion-search" href="#/tab/search">
-    <nav-view name="search-tab"></nav-view>
-  </tab>
-  
-  <!-- Settings Tab -->
-  <tab title="Instellingen" icon="icon ion-ios7-gear" href="#/tab/settings">
-    <nav-view name="settings-tab"></nav-view>
-  </tab>
+    <!-- Settings Tab -->
+    <tab title="Instellingen" icon="icon ion-ios7-gear" href="#/tab/settings">
+        <nav-view name="settings-tab"></nav-view>
+    </tab>
 
 
 </tabs>
