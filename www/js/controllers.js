@@ -14,4 +14,10 @@ angular.module('starter.controllers', [])
   // "Pets" is a service returning mock data (services.js)
   //$scope.pet = PetService.get($stateParams.petId);
   $scope.pet = gApi.get({petId:$stateParams.petId});
-});
+})
+
+.controller('GroupIndexCtrl', function($scope, gApiGroup){
+        $scope.group = gApiGroup.query();
+    });
+
+

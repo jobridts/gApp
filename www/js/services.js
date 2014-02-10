@@ -13,7 +13,7 @@ angular.module('starter.services', [])
     { id: 2, title: 'Turtles', description: 'Everyone likes turtles.' },
     { id: 3, title: 'Sharks', description: 'An advanced pet. Needs millions of gallons of salt water. Will happily eat you.' }
   ];
-  
+
    var persons = [
     {id: 0, Naam: 'Dirickx', Voornaam: 'Elias', GeboorteDatum:"1994-11-16T00:00:00", Type: "Leiding", title: "1", description: "1e"},
     {id: 1, Naam: 'Vanderoost', Voornaam: 'Elias', GeboorteDatum:"1991-09-25T00:00:00", Type: "Leiding", title: "2", description: "2e"},
@@ -43,4 +43,10 @@ angular.module('starter.services', [])
         return $resource('http://jobridts.be/api/Persoon/:petId', {}, {
             update: {method: 'PUT'}
         });
+    })
+    .factory('gApiGroup', function($resource){
+        return $resource('http://jobridts.be/api/Afdeling/:groupId', {}, {
+            update: {method:'PUT'}
+        });
     });
+
